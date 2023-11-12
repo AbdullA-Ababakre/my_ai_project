@@ -51,7 +51,7 @@ export default async function handler(req, res) {
     const assistantMessage = messages.data.find(
       (message) => message.role === "assistant"
     );
-    const returnMessage = assistantMessage.content[0].text.value
+    const returnMessage = assistantMessage.content[0].text.value;
 
     res.status(200).json({ message: returnMessage });
   } else {
