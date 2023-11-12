@@ -13,7 +13,7 @@ export default async function handler(req, res) {
     const { question } = req.body;
 
     const file = await openai.files.create({
-      file: fs.createReadStream("src/data/frontEnd.pdf"),
+      file: fs.createReadStream("public/data/frontEnd.pdf"),
       purpose: "assistants",
     });
 
